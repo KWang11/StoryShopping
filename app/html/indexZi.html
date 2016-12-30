@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>subpage</title>		
+		 <script src="../js/mui.min.js"></script>
+        <link href="../css/mui.min.css" rel="stylesheet"/>
+        <style>
+        	.mui-table-view-cell .mui-navigate-right img{
+        		  width: 100%;
+        		  
+        	}
+        </style>
+	</head>
+	<body>
+		<div class="mui-scroll-wrapper">
+		    <div class="mui-scroll">
+		        <!--这里放置真实显示的DOM内容-->	      
+		        <!--搜索栏-->
+		        <div class="mui-input-row mui-search">
+		            <input type="search" placeholder="其输入关键词">
+		        </div>
+		        <!--商品轮播图-->
+		        <div id="slider" class="mui-slider" >
+		          <div class="mui-slider-group mui-slider-loop">
+		            <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+		            <div class="mui-slider-item mui-slider-item-duplicate">
+		              <a href="#">
+		                <img src="../img/a4.jpg">
+		              </a>
+		            </div>
+		            <!-- 第一张 -->
+		            <div class="mui-slider-item">
+		              <a href="#">
+		                <img src="../img/a1.jpg">
+		              </a>
+		            </div>
+		            <!-- 第二张 -->
+		            <div class="mui-slider-item">
+		              <a href="#">
+		                <img src="../img/a2.jpg">
+		              </a>
+		            </div>
+		            <!-- 第三张 -->
+		            <div class="mui-slider-item">
+		              <a href="#">
+		                <img src="../img/a3.jpg">
+		              </a>
+		            </div>
+		            <!-- 第四张 -->
+		            <div class="mui-slider-item">
+		              <a href="#">
+		                <img src="../img/a4.jpg">
+		              </a>
+		            </div>
+		            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+		            <div class="mui-slider-item mui-slider-item-duplicate">
+		              <a href="#">
+		                <img src="../img/a1.jpg">
+		              </a>
+		            </div>
+		          </div>
+			          <div class="mui-slider-indicator">
+			            <div class="mui-indicator mui-active"></div>
+			            <div class="mui-indicator"></div>
+			            <div class="mui-indicator"></div>
+			            <div class="mui-indicator"></div>
+			          </div>
+		        </div>
+		        <script>
+		        	//获得slider插件对象,自动轮播功能的实现
+					var gallery = mui('.mui-slider');
+					  gallery.slider({
+					     interval:3000//自动轮播周期，若为0则不自动播放，默认为0；
+					});
+		        </script>
+			        
+		        <!--mlis-->
+		        <ul class="mui-table-view">
+		            <li class="mui-table-view-cell mui-media">
+		                <a href="javascript:;">
+		                    <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+		                    <div class="mui-media-body">
+		                        幸福
+		                        <p class="mui-ellipsis">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+		                    </div>
+		                </a>
+		            </li>
+		            <li class="mui-table-view-cell mui-media">
+		                <a href="javascript:;">
+		                    <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+		                    <div class="mui-media-body">
+		                        木屋
+		                        <p class="mui-ellipsis">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+		                    </div>
+		                </a>
+		            </li>
+		            <li class="mui-table-view-cell mui-media">
+		                <a href="javascript:;">
+		                    <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+		                    <div class="mui-media-body">
+		                        港湾
+		                        <p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+		                    </div>
+		                </a>
+		            </li>
+		             <li class="mui-table-view-cell mui-media">
+		                <a href="javascript:;">
+		                    <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+		                    <div class="mui-media-body">
+		                        回家
+		                        <p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+		                    </div>
+		                </a>
+		            </li>
+		             <li class="mui-table-view-cell mui-media">
+		                <a href="javascript:;">
+		                    <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+		                    <div class="mui-media-body">
+		                        征途
+		                        <p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+		                    </div>
+		                </a>
+		            </li>
+		             <li class="mui-table-view-cell mui-media">
+		                <a href="javascript:;">
+		                    <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+		                    <div class="mui-media-body">
+		                        救赎
+		                        <p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+		                    </div>
+		                </a>
+		            </li>
+		        </ul>
+		        <!--列表-->
+		       <ul class="mui-table-view">
+		               <li class="mui-table-view-cell">
+		                   <a class="mui-navigate-right">
+		                       <img src="../img/c1.jpg"/>
+		                   </a>
+		               </li>
+		               <li class="mui-table-view-cell">
+		                   <a class="mui-navigate-right">
+		                       <img src="../img/b1.jpg" />
+		                   </a>
+		               </li>
+		               <li class="mui-table-view-cell">
+		                   <a class="mui-navigate-right">
+		                        <img src="../img/b2.jpg" />
+		                   </a>
+		               </li>
+		               <li class="mui-table-view-cell">
+		                   <a class="mui-navigate-right">
+		                        <img src="../img/b3.jpg" />
+		                   </a>
+		               </li>
+		               <li class="mui-table-view-cell">
+		                   <a class="mui-navigate-right">
+		                        <img src="../img/c2.jpg" />
+		                   </a>
+		               </li>
+		                <li class="mui-table-view-cell">
+		                   <a class="mui-navigate-right">
+		                        <img src="../img/b4.jpg" />
+		                   </a>
+		               </li>
+		                <li class="mui-table-view-cell">
+		                   <a class="mui-navigate-right">
+		                        <img src="../img/b5.jpg" />
+		                   </a>
+		               </li>
+		                <li class="mui-table-view-cell">
+		                   <a class="mui-navigate-right">
+		                        <img src="../img/b7.jpg" />
+		                   </a>
+		               </li>
+		                <li class="mui-table-view-cell">
+		                   <a class="mui-navigate-right">
+		                        <img src="../img/c3.jpg" />
+		                   </a>
+		               </li>
+		                <li class="mui-table-view-cell">
+		                   <a class="mui-navigate-right">
+		                        <img src="../img/b1.jpg" />
+		                   </a>
+		               </li>
+		                <li class="mui-table-view-cell">
+		                   <a class="mui-navigate-right">
+		                        <img src="../img/b2.jpg" />
+		                   </a>
+		               </li>
+		               <li class="mui-table-view-cell">
+		                   <a class="mui-navigate-right">
+		                        <img src="../img/b4.jpg" />
+		                   </a>
+		               </li>
+		               <li class="mui-table-view-cell">
+		                   <a class="mui-navigate-right">
+		                        <img src="../img/b5.jpg" />
+		                   </a>
+		               </li>
+		           </ul>
+		    </div>
+		</div>
+		
+		<script>     
+    	//原生实现滚动
+    	  mui(".mui-scroll-wrapper").scroll().scrollToBottom(100);//100毫秒滚动到底部
+       </script>
+		
+		
+	</body>
+</html>

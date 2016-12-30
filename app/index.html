@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <style>
+    	.dibucaidan{z-index: 100;}
+    	.mui-scroll .mui-active{
+    		color: red;
+    	}
+    </style>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>   
+    <script type="text/javascript" charset="utf-8">
+    /*添加子页面，用来实现滚动*/
+      	mui.init({
+	    subpages:[{
+	      url:'html/indexZi.html',
+	      id:'html/indexZi.html',
+	      styles:{
+	        top:'45px',//mui标题栏默认高度为45px；
+	        bottom:'45px'//默认为0px，可不定义；
+	      }
+	    }]
+	  });
+    </script>
+    
+</head>
+<body>
+	    <!--header-->
+	    <!--<header class="mui-bar mui-bar-nav">
+	        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	        <h1 class="mui-title">标题</h1>
+	    </header>-->
+         <!--nav-->
+         
+		  <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+		            <div class="mui-scroll">
+		                <a class="mui-control-item mui-active">
+		                    全部
+		                </a>
+		                <a class="mui-control-item">
+		                  餐饮美食
+		                </a>
+		                <a class="mui-control-item">
+		                   聚会活动
+		                </a>
+		                <a class="mui-control-item">
+		                   丽人生活
+		                </a>
+		                <a class="mui-control-item">
+		                   文化艺术
+		                </a>
+		                <a class="mui-control-item">
+		                   亲子时光
+		                </a>
+		                <a class="mui-control-item">
+		                   运动健身           
+		                </a>
+		                <a class="mui-control-item">
+		                  匠人传承
+		                </a>
+		                <a class="mui-control-item">
+		                   休闲娱乐
+		                </a>
+		                <a class="mui-control-item">
+		                   健康养生
+		                </a>
+		                <a class="mui-control-item">
+		                   有故事城市
+		                </a>
+		            </div>
+		        </div>
+		<!--底部-->	        
+			<nav class="mui-bar mui-bar-tab dibucaidan">
+			    <a class="mui-tab-item mui-active">
+			        <span class="mui-icon mui-icon-home"></span>
+			        <span class="mui-tab-label">首页</span>
+			    </a>
+			    <a class="mui-tab-item">
+			        <span class="mui-icon mui-icon-map"></span>
+			        <span class="mui-tab-label">周边</span>
+			    </a>
+			    <a class="mui-tab-item">
+			        <span class="mui-icon mui-icon-email"></span>
+			        <span class="mui-tab-label">购物袋</span>
+			    </a>
+			    <a class="mui-tab-item">
+			        <span class="mui-icon mui-icon-person"></span>
+			        <span class="mui-tab-label">我的</span>
+			    </a>				  
+			</nav>
+</body>
+</html>

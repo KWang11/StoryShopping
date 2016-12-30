@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">list</h1>
+	</header>
+	<div class="mui-content">
+	     <ul class="mui-table-view">
+	         <li class="mui-table-view-cell mui-media">
+	             <a href="javascript:;"id="l11">
+	                 <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+	                 <div class="mui-media-body">
+	                     幸福
+	                     <p class="mui-ellipsis">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+	                 </div>
+	             </a>
+	         </li>
+	         <li class="mui-table-view-cell mui-media">
+	             <a href="javascript:;"id="l22">
+	                 <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+	                 <div class="mui-media-body">
+	                     木屋
+	                     <p class="mui-ellipsis">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+	                 </div>
+	             </a>
+	         </li>
+	         <li class="mui-table-view-cell mui-media">
+	             <a href="javascript:;"id="l33">
+	                 <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+	                 <div class="mui-media-body">
+	                     小乔
+	                     <p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+	                 </div>
+	             </a>
+	         </li>
+	         <li class="mui-table-view-cell mui-media">
+	             <a href="javascript:;" id="l44">
+	                 <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+	                 <div class="mui-media-body">
+	                     水平
+	                     <p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+	                 </div>
+	             </a>
+	         </li>
+	         <li class="mui-table-view-cell mui-media">
+	             <a href="javascript:;" id="l55">
+	                 <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+	                 <div class="mui-media-body">
+	                     绅士
+	                     <p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+	                 </div>
+	             </a>
+	         </li>
+	         <li class="mui-table-view-cell mui-media">
+	             <a href="javascript:;" id="l66">
+	                 <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+	                 <div class="mui-media-body">
+	                      演员
+	                     <p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+	                 </div>
+	             </a>
+	         </li>
+	     </ul>
+	</div>
+	<script type="text/javascript" charset="UTF-8">
+      	//初始化预加载详情页面
+			mui.init({
+			  preloadPages:[{
+			    id:'detail.html',
+			    url:'detail.html'           
+			  },{
+			  	id:'details.html',
+			  	url:'details.html'
+			  },{
+			  	id:'PersonalCenter.html',
+			  	url:'PersonalCenter.html'
+			  }
+			  ]
+			});
+    </script>
+    <script>   				
+			mui(".mui-table-view").on('tap','.mui-table-view-cell',function(){
+				var detail;
+			  //获取id
+			  var id = this.getAttribute("id");
+			  console.log("aaa");
+			  console.log(id);
+			  //传值给详情页面，通知加载新数据
+			  mui.fire(detail,'getDetail',{id:id});
+			  //打开新闻详情
+			  mui.openWindow({
+			    id:'detail',
+			    url:'detail.html'
+			  });
+			}) 
+    </script>
+</body>
+</html>
