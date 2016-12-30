@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>detail子页面</title>
+    
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();
+    </script>
+    <style>
+          *{margin: 0;padding: 0;}
+          .mui-scroll-wrapper{background-color: white;}
+          .content_top{background-color:white ;}
+          .content_top{position: relative;}
+    	  .content_top h3{text-align: center;padding-top: 1rem;}
+    	  .content_top p{text-align: center;padding-top: 5px;color: #d78b1f;}
+    	  .content_top img{display: block;width: 80px;height: 80px;border-radius: 50%;position: absolute;left: 50%;top: -25px;transform: translate(-50%,-50%);z-index: 1000;}
+    	  .mui-segmented-control {border: none;}
+    	  .mui-segmented-control .mui-control-item.mui-active{background-color: #eee;color: #333;border-bottom: 3px solid #b07c33;}
+    	  .mui-segmented-control .mui-control-item {border-left: 1px solid #ccc;color: #000;}
+    	  .mui-content .mui-card-content img{width: 100%;,height: 250px;}
+    	   .mui-content .mui-card-header{text-align: center;height: 30px;line-height: 30px;}
+    	   .content_footer{background-color: white;border-top: 0.8rem solid #dfdfdf;}
+    	   .content_footer p{text-align: center;}
+    	
+    </style>
+</head>
+<body>
+	<div class="mui-scroll-wrapper">
+	    <div class="mui-scroll">
+	        <!--这里放置真实显示的DOM内容-->
+	        <div id="slider" class="mui-slider" >
+	          <div class="mui-slider-group mui-slider-loop">
+	            <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+	            <div class="mui-slider-item mui-slider-item-duplicate">
+	              <a href="#">
+	                <img src="../img/a4.jpg">            
+	              </a>
+	            </div>
+	            <!-- 第一张 -->
+	            <div class="mui-slider-item">
+	              <a href="#">
+	                <img src="../img/a1.jpg">
+	              </a>
+	            </div>
+	            <!-- 第二张 -->
+	            <div class="mui-slider-item">
+	              <a href="#">
+	                <img src="../img/a2.jpg">
+	              </a>
+	            </div>
+	            <!-- 第三张 -->
+	            <div class="mui-slider-item">
+	              <a href="#">
+	                <img src="../img/a3.jpg">
+	              </a>
+	            </div>
+	            <!-- 第四张 -->
+	            <div class="mui-slider-item">
+	              <a href="#">
+	                <img src="../img/a4.jpg">
+	              </a>
+	            </div>
+	            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+	            <div class="mui-slider-item mui-slider-item-duplicate">
+	              <a href="#">
+	                <img src="../img/a1.jpg">
+	              </a>
+	            </div>
+	          </div>
+	          <!--分页-->
+	          <!--<div class="mui-slider-indicator">
+	            <div class="mui-indicator mui-active"></div>
+	            <div class="mui-indicator"></div>
+	            <div class="mui-indicator"></div>
+	            <div class="mui-indicator"></div>
+	          </div>-->
+	        </div>
+	        
+	        <!---->
+	        <div class="mui-content content_top">
+	              <h3>壹月轩</h3>
+	              <p>越秀区</p>
+	              <img src="../img/yy_4.jpg"/>
+	        </div>
+	        <div class="mui-content">
+	               <div class="mui-segmented-control" id="mui-segmented-control">
+	                   <a class="mui-control-item mui-active btnLeft" href="#item1">精彩内容</a>
+	                   <a class="mui-control-item btnRight" href="#item2">推荐商品</a>
+	               </div>
+	        </div>
+	        <!--添加点击事件-->
+	        <!--mui通过原生js的方式操作DOM-->
+				<script>
+					mui(".mui-content").on("tap",".btnLeft",function(){
+						   document.querySelector(".content_left").style.display="block";
+						   document.querySelector(".content_right").style.display="none";
+					})
+					mui(".mui-content").on("tap",".btnRight",function(){
+						   document.querySelector(".content_left").style.display="none";
+						   document.querySelector(".content_right").style.display="block";
+					})
+				</script>
+	        <!--content_left-->
+	        <div class="mui-content content_left">
+	                 <div class="mui-card">
+						<!--页眉，放置标题-->
+						<div class="mui-card-header mui-card-media">鬼辣小龙虾</div>
+						<!--内容区-->
+						<div class="mui-card-content">
+							 <img src="../img/b7.jpg" />
+						</div>
+						<!--页脚，放置补充信息或支持的操作-->
+						<div class="mui-card-footer">快来快来，吃了还想吃...</div>
+				</div>
+	        </div>
+	        
+	        <!--content_right-->
+	        <div class="mui-content content_right">
+	               <ul class="mui-table-view mui-grid-view">
+	                   <li class="mui-table-view-cell mui-media mui-col-xs-6">
+	                       <a href="#">
+	                           <img class="mui-media-object" src="../img/b2.jpg">
+	                           <div class="mui-media-body">小桥流水</div>
+	                       </a>
+	                   </li>
+	                   <li class="mui-table-view-cell mui-media mui-col-xs-6">
+	                       <a href="#">	                       	 
+	                           <img class="mui-media-object" src="../img/b4.jpg">
+	                           <div class="mui-media-body">曼妙音乐</div>
+	                       </a>
+	                   </li>
+	                   <li class="mui-table-view-cell mui-media mui-col-xs-6">
+	                       <a href="#">
+	                           <img class="mui-media-object" src="../img/b5.jpg">
+	                           <div class="mui-media-body">诗文熟字</div>
+	                       </a>
+	                   </li>
+	                   <li class="mui-table-view-cell mui-media mui-col-xs-6">
+	                       <a href="#">
+	                           <img class="mui-media-object" src="../img/b1.jpg">
+	                           <div class="mui-media-body">回望经典</div>
+	                       </a>
+	                   </li>
+	               </ul>
+	        </div>
+	        
+	         <!--尾部书写-->
+	          <div class="mui-content content_footer">
+	                <p>Shop information</p>
+	                <p>店铺信息</p>
+	                <p><span class="mui-icon mui-icon-spinner mui-spin"></span>营业时间</p>
+	                <p><span class="mui-icon mui-icon-phone"></span>店家电话</p>
+	                <p>15918749573</p>
+	                <p><span class="mui-icon mui-icon-location">店家地址</span></p>
+	                <p>天河路万菱汇B1层46号</p>
+	          </div>
+	        
+	    </div>
+	</div>
+	<!--滚动js实现-->
+	<script>
+		mui('.mui-scroll-wrapper').scroll().scrollTo(0,0,100);//100毫秒滚动到顶
+	</script>
+	<!--自动轮播js-->
+	<script>
+		//获得slider插件对象
+			var gallery = mui('.mui-slider');
+			gallery.slider({
+			  interval:1000//自动轮播周期，若为0则不自动播放，默认为0；
+			});
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html,
+        body,
+        #container {
+            height:100%;
+            overflow:hidden;
+            font:small/1.5 "宋体", serif;
+        }
+
+        #container{
+            width: 100%;
+            display: table;
+            margin:0 auto;
+            background: #00CC00;
+        }
+        #container > div{
+            display: table-row;
+
+        }
+        #header,#footer{
+            width: 1rem;
+            background: #cccccc;
+        }
+
+        #wrap{
+            width: 100%;
+            height: 100%;
+            display: table;
+        }
+
+        #left {
+            height: 100%;
+            display:table-cell;
+            background: #ff2d38;
+
+        }
+        #right {
+            width: 20rem;
+            height: 100%;
+            display:table-cell;
+            background: #1531ff;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="header"></div>
+    <div id="content">
+        <div id="wrap">
+            <div id="left"></div>
+            <div id="right"></div>
+        </div>
+    </div>
+    <div id="footer"></div>
+</div>
+</body>
+</html>
+<!--这段代码实现了上下自适应和左右自适应，其中 具有display: table-row;     display:table-cell;属性的div不固定高度或宽度进行自适应，其中有几点要注意，
+1.请做自适应的时候用div，这样不指定宽度和高度，它会自动填充父元素，这样中间层就是div:parent - 100px -100px;
+2.如果不加 <div id="wrap">这个div进行包裹，left和right会被识别成和header，footer一个table内的同级别元素，header，footer自会占用一列；
+3.最有一点，请指定html，body height:100%,这样div就可以获取到全屏的高度。-->

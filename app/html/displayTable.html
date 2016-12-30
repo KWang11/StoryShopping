@@ -1,0 +1,46 @@
+<!doctype html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<title>display:table</title> 
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  
+<style> 
+*{ padding:0; margin:0;} 
+/*大小不固定元素居中*/
+.box div{display:table-cell; width:1em; height:1em; border:1px solid #beceeb; font-size:144px; text-align:center; vertical-align:middle;} 
+.box div img{vertical-align:middle;}
+/* 轻松实现了三栏等高布局*/
+.main{ display:table;border-collapse:collapse; /*为表格设置合并边框模型*/} 
+.nav{ display:table-cell; width:180px; background:#999;} 
+.extras{ display:table-cell; width:180px; padding-left:10px; border-right:1px solid #F00; background:#060;} 
+.content{ display:table-cell; width:300px; padding-left:10px;border:1px solid red;} 
+
+
+</style> 
+</head> 
+  
+<body> 
+
+  <!--1. display:table-cell与大小不固定元素的垂直居中-->
+  <div class="box">
+  	    <div><img src="../img/b1.jpg"/></div>
+  	    <div><img src="../img/yy_1.jpg"/></div>
+  	    <div><img src="../img/b3.jpg"/></div>
+  	    <div><img src="../img/yy_3.jpg"/></div>
+  	    <div><img src="../img/b5.jpg"/></div>
+  </div>
+  
+  
+  <!--2. 轻松实现了三栏等高布局-->
+  <!--<div class="main"> 
+      <div class="nav">静安嘉</div> 
+      <div class="extras">空间第六节安第六节安第六节安第六节安第六节安第六节安第六节安第六节安第六节安静的空间安静的</div> 
+      <div class="content">阿瓦我ii啊啊啊<br></div>     
+    </div> -->
+    
+   
+
+  
+</body> 
+</html> 

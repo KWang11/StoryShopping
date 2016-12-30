@@ -10,22 +10,25 @@
       	mui.init();
     </script>
     <style>
-    	.mui-table-view .mui-table-view-cell .top .a1{display: inline-block;padding-left: 20px;color: yellow;
+        *{font-size: 62.5%;}
+        .firstlist{margin-bottom: 0.5rem;}
+        .secondlist{margin-bottom: 0.5rem;}
+        .mui-table-view .mui-table-view-cell .top{padding-top: 0.5rem;padding-bottom: 0.5rem;}
+    	.mui-table-view .mui-table-view-cell .top .a1{display: inline-block;padding-left: 0.5rem;color: yellow;
     	  	  
     	  }
-    	  .mui-table-view .mui-table-view-cell .top .a2{display: inline-block;padding-left: 20px;color:#000;font-size: 18px;
+    	  .mui-table-view .mui-table-view-cell .top .a2{display: inline-block;padding-left: 0.5rem;color:#000;font-size: 1.2rem;
     	  	  
     	  }
-    	  .mui-table-view .mui-table-view-cell .top .a3{display: inline-block;float: right;color: #333;padding-right: 20px;font-size: 16px;
+    	  .mui-table-view .mui-table-view-cell .top .a3{display: inline-block;float: right;color: #333;padding-right: 0.5rem;font-size: 1.0rem;
     	  	  
     	  }
-    	  .mui-table-view .mui-table-view-cell .top .a4{display: inline-block;color: #333;padding-left: 10px;font-size: 16px;
+    	  .mui-table-view .mui-table-view-cell .top .a4{display: inline-block;color: #333;padding-left: 1rem;font-size: 1.0rem;
     	  	  
-    	  }
-    	  
+    	  }  	  
     	  .dengfen{display: flex;}
-    	  .dengfen div{flex: 1;border:1px solid red;text-align: center;height: 70px;padding-top: 6px;}
-    	  .dengfen div span{display: inline-block;padding-top: 5px;}
+    	  .dengfen div{flex: 1;border:1px solid red;text-align:center;height: 6rem;padding-top: 6px;}
+    	  .dengfen div span{display: inline-block;padding-top: 2px;}
     </style>
 </head>
 <body>
@@ -34,7 +37,7 @@
 	        <!--这里放置真实显示的DOM内容-->
 	         <div class="mui-content">
 	         	
-	         	    <ul class="mui-table-view">
+	         	    <ul class="mui-table-view firstlist">
 	         	            <li class="mui-table-view-cell">
 	         	                <a class="top"> 
 	         	                    <span class="mui-icon mui-icon-spinner mui-spin a1"></span>
@@ -44,18 +47,56 @@
 	         	            </li>
 	         	            <li class="mui-table-view-cell dengfen">
 	         	                 <div><span class="mui-icon mui-icon-star"></span><br/><span>待支付</span></div>
-	         	                  <div><span class="mui-icon mui-icon-star"></span><br/><span>待发货</span></div>
-	         	                   <div><span class="mui-icon mui-icon-star"></span><br/><span>货款结算</span></div>
-	         	                    <div><span class="mui-icon mui-icon-star"></span><br/><span>家族订单</span></div>
+	         	                  <div><span class="mui-icon mui-icon-pengyouquan"></span><br/><span>待发货</span></div>
+	         	                   <div><span class="mui-icon mui-icon-weixin"></span><br/><span>货款结算</span></div>
+	         	                    <div><span class="mui-icon mui-icon-personadd"></span><br/><span>家族订单</span></div>
 	         	                    
 	         	            </li>
 	         	            
 	         	        </ul>
-	         
+	         	        
+	         	       <ul class="mui-table-view secondlist">
+	         	            <li class="mui-table-view-cell">
+	         	                <a class="top"> 
+	         	                    <span class="mui-icon mui-icon-spinner mui-spin a1"></span>
+	         	                    <span class="a2">我的钱包</span>
+	        	                    <span class="a3">查看详情<span class="mui-icon mui-icon-arrowright a4"></span></span>         	                    
+	         	                </a>
+	         	            </li>
+	         	            <li class="mui-table-view-cell dengfen">
+	         	                 <div><span>0.00</span><br/><span>待支付</span></div>
+	         	                  <div><span>0.00</span><br/><span>待发货</span></div>
+	         	                   <div><span>0.00</span><br/><span>货款结算</span></div>
+	         	                    <div><span>0</span><br/><span>家族订单</span></div>         	                    
+	         	            </li>	         	            
+	         	        </ul>
+	         	        
+         	         <ul class="mui-table-view">
+         	            <li class="mui-table-view-cell">
+         	                <a class="top"> 
+         	                    <span class="mui-icon mui-icon-spinner mui-spin a1"></span>
+         	                    <span class="a2">我的应用</span>      	                     
+         	                </a>
+         	            </li>
+         	            <li class="mui-table-view-cell dengfen">
+         	                 <div><span class="mui-icon mui-icon-camera"></span><br/><span>我的家族</span></div>
+         	                  <div><span class="mui-icon mui-icon-videocam"></span><br/><span>推广二维码</span></div>
+         	                   <div><span class="mui-icon mui-icon-refreshempty"></span><br/><span>推广海报</span></div>
+         	                    <div><span class="mui-icon mui-icon-refresh"></span><br/><span>个人设置</span></div>         	                    
+         	            </li>	
+         	             <li class="mui-table-view-cell dengfen">
+         	                 <div><span class="mui-icon mui-icon-starhalf"></span><br/><span>商品收藏</span></div>
+         	                  <div><span class="mui-icon mui-icon-refreshempty"></span><br/><span>视频收藏</span></div>
+         	                   <div><span class="mui-icon mui-icon-paperclip"></span><br/><span>我的关注</span></div>
+         	                    <div><span class="mui-icon mui-icon-chatbubble"></span><br/><span>优惠间</span></div>         	                    
+         	            </li>	
+         	            
+         	        </ul>
+	         	    
 	         </div>
 	    </div>
 	   
 	</div>
-	
+
 </body>
 </html>
