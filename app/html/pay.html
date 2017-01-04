@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../../js/mui.min.js"></script>
+    <link href="../../css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	 <form id="payForm" action="http://zszypay.91lds.com/zszy-pay/trade/payApply" method="post">
+            <input type="hidden" name="returnUrl" id="returnUrl" value="">
+            <input type="hidden" name="orderId" id="orderId" value="">
+            <input type="hidden" name="payType" id="payType" value="">
+            <input type="hidden" name="openid" id="openid" value="">
+            <input type="hidden" name="orderType" id="orderType" value="">
+        </form>
+        <script>
+        	//支付宝
+				function aliPay(orderId, orderType) {
+				    $("#orderId").val(orderId);
+				    $("#payType").val("3"); //支付宝wap支付    //   3   支付类型
+				    $("#openid").val("");
+				    $("#orderType").val(orderType); //支付
+				    $("#payForm").submit();
+				}
+				//微信
+				function wxPay(orderId, orderType) {
+				    var openid = $.cookie('openid');
+				    if(openid == null || openid == "" || openid == undefined || openid == "null") {
+				        var href = document.location.href;
+				        var strs = href.substring(href.lastIndexOf("/") + 1, href.length);
+				        window.location.href='http://blog.163.com/w_yue1314/blog/index.html?' + strs;
+				    }
+				    $("#orderId").val(orderId);
+				    $("#payType").val("1"); //微信wap支付
+				    $("#openid").val(openid);
+				    $("#orderType").val(orderType); //支付
+				    $("#payForm").submit();
+				}
+        </script>
+</body>
+</html>
